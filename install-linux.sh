@@ -35,6 +35,12 @@ sudo snap install insomnia
 snap install spotify
 #========================================================================================
 
+# ===| MongoDB Compass |===
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.25.0_amd64.deb -O mongodb-compass.deb
+sudo dpkg -i mongodb-compass.deb
+sudo apt -y install --fix-broken
+#========================================================================================
+
 # ===| Steam |===
 wget https://repo.steampowered.com/steam/archive/precise/steam_latest.deb
 sudo dpkg -i steam_latest.deb
