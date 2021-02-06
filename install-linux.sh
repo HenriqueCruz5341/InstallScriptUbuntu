@@ -84,6 +84,9 @@ echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclips
 # ===| Configurando o tema do sistema |===
 sudo apt -y install gnome-tweak-tool
 
+git clone https://github.com/kgshank/gse-sound-output-device-chooser.git
+cp --recursive gse-sound-output-device-chooser/sound-output-device-chooser@kgshank.net $HOME/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net
+
 wget https://codeload.github.com/dracula/gtk/zip/master
 unzip master
 rm -r master
