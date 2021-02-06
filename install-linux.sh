@@ -71,11 +71,9 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 #========================================================================================
 
 # ===| Filezilla |===
-wget "https://dl2.cdn.filezilla-project.org/client/FileZilla_3.52.2_x86_64-linux-gnu.tar.bz2?h=HcuTqsFRUupRaxk4owM1Kw&x=1612298106" -O filezilla.tar.bz2
-sudo tar -xjvf filezilla.tar.bz2 -C /opt/
-sudo mv /opt/FileZilla*/ /opt/filezilla
-sudo ln -sf /opt/filezilla/bin/filezilla /usr/bin/filezilla
-echo -e '[Desktop Entry]\n Version=1.0\n Name=filezilla\n Exec=/opt/filezilla/bin/filezilla\n Icon=/opt/filezilla/share/icons/hicolor/48x48/apps/filezilla.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/filezilla.desktop
+sudo add-apt-repository ppa:sicklylife/filezilla
+sudo apt update
+sudo apt -y install filezilla
 #========================================================================================
 
 # ===| Eclipse |===
