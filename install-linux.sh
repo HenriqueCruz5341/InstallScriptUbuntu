@@ -53,6 +53,11 @@ git config --global user.name "HenriqueCruz"
 git config --global user.email "henriquepaulinocruz@hotmail.com"
 #========================================================================================
 
+# ===| Java |===
+sudo apt -y install default-jre
+sudo apt -y install default-jdk
+#========================================================================================
+
 # ===| Docker |===
 sudo apt -y install docker
 sudo apt -y install docker.io
