@@ -14,6 +14,7 @@ Código feito em Shell Script para instalação de todos os programas que mais u
  - Git
  - Docker
  - npm e NodeJS
+ - OBS Studio
  - Filezilla
  - Eclipse
 
