@@ -48,12 +48,6 @@ sudo dpkg -i mongodb-compass.deb
 sudo apt -y install --fix-broken
 #========================================================================================
 
-# ===| Steam |===
-wget https://repo.steampowered.com/steam/archive/precise/steam_latest.deb
-sudo dpkg -i steam_latest.deb
-sudo apt -y install --fix-broken
-#========================================================================================
-
 # ===| Git |===
 sudo apt -y install git
 git config --global user.name "HenriqueCruz"
@@ -77,6 +71,13 @@ sudo apt -y install npm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 #========================================================================================
 
+# ===| npm e NodeJS |===
+sudo apt-get install ffmpeg
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt-get update
+sudo apt-get -y install obs-studio
+#========================================================================================
+
 # ===| Filezilla |===
 sudo add-apt-repository ppa:sicklylife/filezilla
 sudo apt update
@@ -89,6 +90,12 @@ sudo tar -zxvf eclipse.tar.gz -C /opt/
 sudo mv /opt/eclipse*/ /opt/eclipse
 sudo wget https://dl2.macupdate.com/images/icons128/11662.png -O /opt/eclipse/eclipse.png
 echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/eclipse.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
+#========================================================================================
+
+# ===| Steam |===
+wget https://repo.steampowered.com/steam/archive/precise/steam_latest.deb
+sudo dpkg -i steam_latest.deb
+sudo apt -y install --fix-broken
 #========================================================================================
 
 # ===| Configurando o tema do sistema |===
