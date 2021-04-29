@@ -8,6 +8,7 @@ Código feito em Shell Script para instalação de todos os programas que mais u
  - Kolourpaint
  - GIMP
  - Insomnia
+ - Postman
  - Spotify
  - MongoDB Compass
  - Steam
