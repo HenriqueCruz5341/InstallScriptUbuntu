@@ -77,8 +77,9 @@ sudo usermod -aG docker $USER
 # ===| asdf |===
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 git -C ~/.asdf checkout "$(git -C ~/.asdf describe --abbrev=0 --tags)"
-echo ". \$HOME/.asdf/asdf.sh" >> ~/.bashrc
-echo ". \$HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
+echo -e "\n. \$HOME/.asdf/asdf.sh" >> ~/.bashrc
+echo -e ". \$HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
+source ~/.bashrc
 #========================================================================================
 
 # ===| nodejs (from asdf) |===
