@@ -22,6 +22,10 @@ sudo dpkg -i code_1.52.1-1608136922_amd64.deb
 sudo apt -y install kolourpaint
 #========================================================================================
 
+# ===| SCP |===
+sudo apt install -y openssh-client openssh-server
+#========================================================================================
+
 # ===| GIMP |===
 sudo apt -y install flatpak
 flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref 
@@ -70,12 +74,26 @@ sudo apt -y install docker-compose
 sudo usermod -aG docker $USER
 #========================================================================================
 
-# ===| npm e NodeJS |===
-sudo apt -y install npm
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+# ===| asdf |===
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+git -C ~/.asdf checkout "$(git -C ~/.asdf describe --abbrev=0 --tags)"
+echo ". \$HOME/.asdf/asdf.sh" >> ~/.bashrc
+echo ". \$HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
 #========================================================================================
 
-# ===| npm e NodeJS |===
+# ===| nodejs (from asdf) |===
+asdf plugin-add nodejs
+echo "Digite qual a versao LTS do NodeJS"
+read version
+asdf install nodejs $version
+asdf global nodejs $version
+#========================================================================================
+
+# ===| npm |===
+sudo apt -y install npm
+#========================================================================================
+
+# ===| OBS-Studio |===
 sudo apt-get install ffmpeg
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt-get update
@@ -137,8 +155,4 @@ gsettings set org.gnome.desktop.background picture-uri "file:///home/henrique/Im
 
 sudo apt autoremove -y
 sudo apt autoclean -y
-
-echo "O PC será reiniciado, quando voltar, execute o comando 'nvm install node'"
-echo "Pressione ENTER para continuar"
-read enter
 sudo reboot now
