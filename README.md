@@ -18,6 +18,7 @@ Código feito em Shell Script para instalação de todos os programas que mais u
  - OBS Studio
  - Filezilla
  - Eclipse
+ - Steam
  - DBeaver
 
 ## Tema
@@ -27,8 +28,9 @@ Código feito em Shell Script para instalação de todos os programas que mais u
 
 ## Como usar:
  1. `git clone` no repositório;
- 2. entrar na pasta que foi baixada;
- 3. `chmod +x install-linux.sh`;
- 4. `./instal-linux.sh`;
- 5. ficar atento para informar algumas informações quando necessário.
+ 2. altere algumas informações para que fique de acordo com você, por exemplo, tirar meu nome do git;
+ 3. entrar na pasta que foi baixada;
+ 4. `chmod +x install-linux.sh`;
+ 5. `./instal-linux.sh`;
+ 6. ficar atento para informar algumas informações quando necessário.
  
