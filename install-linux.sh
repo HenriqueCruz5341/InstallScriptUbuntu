@@ -121,6 +121,12 @@ sudo dpkg -i steam_latest.deb
 sudo apt -y install --fix-broken
 #========================================================================================
 
+# ===| DBeaver |===
+sudo add-apt-repository ppa:serge-rider/dbeaver-ce
+sudo apt-get update
+sudo apt-get install dbeaver-ce
+#========================================================================================
+
 # ===| Configurando o tema do sistema |===
 sudo apt -y install gnome-tweak-tool
 
