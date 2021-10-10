@@ -18,6 +18,7 @@ Código feito em Shell Script para instalação de todos os programas que mais u
  - OBS Studio
  - Filezilla
  - Eclipse
+ - DBeaver
 
 ## Tema
  - [Papirus Icons](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
