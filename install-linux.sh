@@ -32,16 +32,19 @@ flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
 #========================================================================================
 
 # ===| Insomnia |===
-echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
+echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" \
     | sudo tee -a /etc/apt/sources.list.d/insomnia.list
-wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
-    | sudo apt-key add -
-sudo apt update
-sudo apt -y install insomnia 
+sudo apt-get update
+sudo apt-get install insomnia
 #========================================================================================
 
 # ===| Postman |===
-sudo snap install postman
+wget https://dl.pstmn.io/download/latest/linux64
+sudo tar -xvf linux64 -C /usr/bin
+export PATH=$PATH:/usr/bin/Postman
+sudo su 
+echo -e "[Desktop Entry]\nName=Postman API Tool\nGenericName=Postman\nComment=Testing API\nExec=/usr/bin/Postman/Postman\nTerminal=false\nX-MultipleArgs=false\nType=Application\nIcon=/usr/bin/Postman/app/resources/app/assets/icon.png\nStartupWMClass=Postman\nStartupNotify=true" > /usr/share/applications/Postman.desktop
+exit
 #========================================================================================
 
 # ===| Spotify |===
@@ -108,11 +111,11 @@ sudo apt -y install filezilla
 #========================================================================================
 
 # ===| Eclipse |===
-wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2020-12/R/eclipse-java-2020-12-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
-sudo tar -zxvf eclipse.tar.gz -C /opt/
-sudo mv /opt/eclipse*/ /opt/eclipse
-sudo wget https://dl2.macupdate.com/images/icons128/11662.png -O /opt/eclipse/eclipse.png
-echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/eclipse.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
+# wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2020-12/R/eclipse-java-2020-12-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+# sudo tar -zxvf eclipse.tar.gz -C /opt/
+# sudo mv /opt/eclipse*/ /opt/eclipse
+# sudo wget https://dl2.macupdate.com/images/icons128/11662.png -O /opt/eclipse/eclipse.png
+# echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/eclipse.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
 #========================================================================================
 
 # ===| Steam |===
@@ -125,6 +128,10 @@ sudo apt -y install --fix-broken
 sudo add-apt-repository ppa:serge-rider/dbeaver-ce
 sudo apt-get update
 sudo apt-get install dbeaver-ce
+#========================================================================================
+
+# ===| VLC |===
+sudo apt install vlc
 #========================================================================================
 
 # ===| Configurando o tema do sistema |===
@@ -155,8 +162,8 @@ cd gnome-terminal
 ./install.sh -s Dracula --install-dircolors
 rm -r gnome-terminal
 
-wget https://s2.best-wallpaper.net/wallpaper/1920x1080/1802/Watchtower-moon-mountains-forest-art-picture_1920x1080.jpg
-mv Watchtower-moon-mountains-forest-art-picture_1920x1080.jpg ~/Imagens/wallpaper.jpg
+wget https://wallpaperaccess.com/full/1267200.jpg
+mv 1267200.jpg ~/Imagens/wallpaper.jpg
 gsettings set org.gnome.desktop.background picture-uri "file:///home/henrique/Imagens/wallpaper.jpg"
 #========================================================================================
 
