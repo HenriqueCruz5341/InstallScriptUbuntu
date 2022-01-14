@@ -87,10 +87,8 @@ source ~/.bashrc
 
 # ===| nodejs (from asdf) |===
 asdf plugin-add nodejs
-echo "Digite qual a versao LTS do NodeJS"
-read version
-asdf install nodejs $version
-asdf global nodejs $version
+asdf install nodejs lts
+asdf global nodejs lts
 #========================================================================================
 
 # ===| npm |===
