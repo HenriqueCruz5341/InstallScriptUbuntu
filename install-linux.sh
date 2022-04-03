@@ -70,6 +70,10 @@ sudo apt -y install default-jre
 sudo apt -y install default-jdk
 #========================================================================================
 
+# ===| Maeven |===
+sudo apt -y install maeven
+#========================================================================================
+
 # ===| Docker |===
 sudo apt -y install docker
 sudo apt -y install docker.io
